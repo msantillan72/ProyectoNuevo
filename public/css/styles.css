@@ -4,42 +4,58 @@
     box-sizing: border-box;
 }
 
-header{
+header {
+
     background-color: #EAC926;
+
 }
 
 body {
+    
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
+ 
 }
 
-h3{
+h3 {
     padding:10px;
     font-size: 24px;
 }
+
 
 p{
     font-size: 12px;
 }
 
 header nav{
+
     font-size: 12px;
     margin-left: 20px;
+    
+    
 }
 
 header div.logo,
 header .form {
+    
     width: 50%;
     height: 50%;
+    
 }
 
 header .form {
+    
     display: flex;
     align-items: center;
-    padding: 2px;
+    padding:50px;
     font-size: 11px;
 }
 
+.input{
+   position: relative;
+   width: 500%;
+  
+}
 div.main-article {
     border:1px solid #ebebeb;
     padding-left:15px;
@@ -53,7 +69,7 @@ header div.top-header p{
 
 header .form .input {
     background-color: #FFF;
-    border: 1px solid #000;
+    border:1px solid #666;
     outline: none;
     color: #666;
     padding: 2px;
@@ -62,39 +78,84 @@ header .form .input {
 header .form .submit{
     display: block;
     background-color: #FFF;
-    border: 1px solid #000;
+    border: 1px solid #666; 
     color: #666;
-    width: auto;
+    opacity: 0.8;
+    width:auto;
     border-radius: 1px;
-    margin: 5px;
-    justify-content: center;
+    margin:0px;
+    
+}
+.submit{
+    font-size: 17px;
+    border: none;
 }
 
-header ul li{
+.menu li {
+    padding:15px;
+    display:inline-block;
+    margin:auto;   
+   text-decoration-style: none;
+        
+  }
+
+header.menu li a{
     
-    display: inline-block;
-    flex-wrap: initial;
-    list-style-type: none;
+    text-decoration:none;
+    text-align: center;
+    display:block;
+    
+}
+.menu li:hover{
+  color:#FFF;
 }
 
-header ul li a{
-    
+header.menu{
+    display: block;
+align-content: center;    
+    max-width:1000px;
+ width:auto;       
 
-padding:0.5rem 1rem;
-text-decoration: none;
-    color: #000;
 }
 
 div.top-header{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5%;
+    display:flex;
+    flex-wrap:wrap;
+    padding:5%;
 }
 
-section.banner img{
+.banner{
     width: 100%;
+    margin:auto;
+    overflow: hidden;
+}
+.banner ul{
+    display: flex;
+    padding:0;
+    width: 400%;
+animation: cambio 15s infinite alternate;
+animation-timing-function: ease-in-out;
 }
 
+.banner li{
+    width:80%;
+    list-style:none;    
+}
+.banner img{
+    width: 100%;
+
+}
+@keyframes cambio{
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    40% {margin-left:-134%;}
+    60% {margin-left:-134%;}
+    
+    80% {margin-left:-267%;}
+    100% {margin-left:-267%;}
+
+}
 main {
     width: 100%;  
     align-content: center;
@@ -199,7 +260,7 @@ section .tarjeta-Credito i h4 article{
 }
 
 @media (max-width: 361px){ 
-header ul li {
+.menu li {
     display: none;
 }
     .description{
@@ -216,6 +277,12 @@ header ul li {
     main section article {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
+ .products{
+    display:flex;
+    flex-direction: row;
+    
+}
+
   }
 
 main .register{
